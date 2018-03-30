@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+<title>ip info</title>
+<link rel="stylesheet" href="http://shapegraph.com/cdn/css/sg.css" type="text/css" />
+</head>
+<body>
+
+<script type="text/javascript">
+
+addEventListener("load", function(){
+
+var s1 = document.createElement('script');
+  s1.setAttribute('src', 'http://ipinfo.io/?callback=Location');
+  s1.setAttribute('type', 'application/javascript');
+  document.getElementsByTagName("head")[0].appendChild(s1);
+  
+  var s2 = document.createElement('script');
+  s2.setAttribute('src', 'http://ipinfo.io/?callback=Ip');
+  s2.setAttribute('type', 'application/javascript');
+  document.getElementsByTagName("head")[0].appendChild(s2);
+  
+  var s3 = document.createElement('script');
+  s3.setAttribute('src', 'http://ipinfo.io/?callback=Hostname');
+  s3.setAttribute('type', 'application/javascript');
+  document.getElementsByTagName("head")[0].appendChild(s3);
+  
+  var s4 = document.createElement('script');
+  s4.setAttribute('src', 'http://ipinfo.io/?callback=City');
+  s4.setAttribute('type', 'application/javascript');
+  document.getElementsByTagName("head")[0].appendChild(s4);
+  
+  var s5 = document.createElement('script');
+  s5.setAttribute('src', 'http://ipinfo.io/?callback=Region');
+  s5.setAttribute('type', 'application/javascript');
+  document.getElementsByTagName("head")[0].appendChild(s5);
+  
+  var s6 = document.createElement('script');
+  s6.setAttribute('src', 'http://ipinfo.io/?callback=Country');
+  s6.setAttribute('type', 'application/javascript');
+  document.getElementsByTagName("head")[0].appendChild(s6);
+
+});
+
+function Location(response) {
+            var d1 = document.createElement('div');
+            var t1 = document.createTextNode('coordinates: ' + response.loc);
+            document.body.appendChild(d1);
+            d1.appendChild(t1);
+            var br1 = document.createElement('br');
+            document.body.appendChild(br1);
+        }
+        
+function Ip(response) {
+            var d2 = document.createElement('div');
+            var t2 = document.createTextNode('ip: ' + response.ip);
+            document.body.appendChild(d2);
+            d2.appendChild(t2);
+            var br2 = document.createElement('br');
+            document.body.appendChild(br2);
+        }
+        
+function Hostname(response) {
+            var d3 = document.createElement('div');
+            var t3 = document.createTextNode('hostname: ' + response.hostname);
+            document.body.appendChild(d3);
+            d3.appendChild(t3);
+            var br3 = document.createElement('br');
+            document.body.appendChild(br3);
+        }
+        
+function City(response) {
+            var d4 = document.createElement('div');
+            var t4 = document.createTextNode('city: ' + response.city);
+            document.body.appendChild(d4);
+            d4.appendChild(t4);
+            var br4 = document.createElement('br');
+            document.body.appendChild(br4);
+        }
+        
+function Region(response) {
+            var d5 = document.createElement('div');
+            var t5 = document.createTextNode('region: ' + response.region);
+            document.body.appendChild(d5);
+            d5.appendChild(t5);
+            var br5 = document.createElement('br');
+            document.body.appendChild(br5);
+        }
+
+function Country(response) {
+            var d6 = document.createElement('div');
+            var t6 = document.createTextNode('country: ' + response.country);
+            document.body.appendChild(d6);
+            d6.appendChild(t6);
+            var br6 = document.createElement('br');
+            document.body.appendChild(br6);
+        }
+        
+</script>
+
+</body>
+</html>
