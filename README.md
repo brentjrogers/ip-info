@@ -1,1 +1,1 @@
-# ipInfo
+# ip-info
